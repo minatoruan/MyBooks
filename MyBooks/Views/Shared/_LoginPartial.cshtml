@@ -1,0 +1,22 @@
+﻿@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    }
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="#" title="Manage">Hello Duc!</a>
+        </li>
+        <li><a href="#">Log off</a></li>
+    </ul>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Log in</a></li>
+    </ul>
+}
