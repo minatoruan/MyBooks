@@ -26,7 +26,6 @@ namespace MyBooks.Web
             _kernel.Load(Assembly.GetExecutingAssembly());
 
             DependencyResolver.SetResolver(new NinjectHttpDependencyResolver(_kernel));
-            //ControllerBuilder.Current.SetControllerFactory(new NinjectHttpDependencyResolver(_kernel));
             return _kernel;
         }
     }

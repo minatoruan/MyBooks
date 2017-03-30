@@ -19,20 +19,7 @@ namespace MyBooks.Web
         {
 
         }
-
-        /*public override IController CreateController(RequestContext requestContext, string controllerName)
-        {
-            try
-            {
-                var controllerType = base.GetControllerType(requestContext, controllerName);
-                return _kernel.Get(controllerType) as IController;
-            }
-            catch (Exception)
-            {
-                return base.CreateController(requestContext, controllerName);
-            }
-        }*/
-
+		
         public object GetService(Type serviceType)
         {
             return _kernel.TryGet(serviceType);
