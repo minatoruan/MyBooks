@@ -2,3 +2,6 @@ packages
 *.user 
 bin 
 obj 
+*.suo
+.vs
+*.config

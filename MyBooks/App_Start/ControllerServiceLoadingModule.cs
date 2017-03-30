@@ -34,7 +34,7 @@ namespace MyBooks.Web
 
             Kernel.Bind<IMongoDatabase>()
                 .ToMethod(x => Kernel.Get<MongoClient>().GetDatabase(Kernel.Get<MongoUrl>().DatabaseName))
-                .InThreadScope();
+                .InTransientScope();
         }
 
         private void BindInterfaceToService(string assemblyFile)
@@ -48,7 +48,7 @@ namespace MyBooks.Web
                 var impl = types
                     .Where(x => !x.IsInterface && !x.IsGenericType)
                     .First(x => x.Name.EndsWith(@interface.Name.Substring(1), StringComparison.CurrentCultureIgnoreCase));
-                Kernel.Bind(@interface).To(impl).InThreadScope();
+                Kernel.Bind(@interface).To(impl).InTransientScope();
             }
         }
 

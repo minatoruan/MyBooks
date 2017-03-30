@@ -2,4 +2,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-Hello world
+@section scripts{
+	@Scripts.Render("~/Scripts/Account/init.js")
+}
+
+<hello-world></hello-world>
