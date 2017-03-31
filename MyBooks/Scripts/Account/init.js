@@ -1,4 +1,6 @@
-﻿//Component
+﻿// for reference only
+
+//Component
 (function(app) {
 	app.HelloWorldComponent =
         ng.core.Component({
