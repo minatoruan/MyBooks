@@ -5,3 +5,5 @@ obj
 *.suo
 .vs
 *.config
+node_modules
+/MyBooks/node_modules
